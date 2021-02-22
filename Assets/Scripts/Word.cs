@@ -21,9 +21,12 @@ public class Word
     }
 
     #region Variables
-    public wordType Type;
 
-    public wordPurpose Purpose; 
+    public wordType type;
+
+    public wordPurpose purpose;
+
+    public GameObject prefab;
 
     #endregion
 }
