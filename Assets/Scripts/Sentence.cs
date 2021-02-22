@@ -18,7 +18,13 @@ public class Sentence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Vector2 offset = new Vector2(0f, 0f);
 
+        foreach (Word word in words)
+        {
+            GameObject wordObject = Instantiate(word.prefab, transform.position + (Vector3) offset, Quaternion.identity, transform);
+            offset.x += wordObject.GetComponent<Collider2D>().bounds.size.x;
+        }
     }
 
     // Update is called once per frame
