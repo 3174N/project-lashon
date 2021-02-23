@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
 
         rb.position = position;
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer) && 
+                     !Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer).isTrigger;
     }
 
     private void OnDrawGizmosSelected()
