@@ -23,6 +23,9 @@ public class Sentence : MonoBehaviour
         InitializeSentence();
     }
 
+    /// <summary>
+    /// Initialize sntence with words and triggered colliders (when necessery)
+    /// </summary>
     private void InitializeSentence()
     {
         foreach (Transform child in transform)
