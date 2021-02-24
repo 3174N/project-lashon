@@ -24,7 +24,7 @@ public class Sentence : MonoBehaviour
     }
 
     /// <summary>
-    /// Initialize sntence with words and triggered colliders (when necessery)
+    /// Initialize sentence with words and triggered colliders (when necessary)
     /// </summary>
     private void InitializeSentence()
     {
@@ -37,7 +37,7 @@ public class Sentence : MonoBehaviour
 
         foreach (Word word in words)
         {
-            GameObject wordObject = Instantiate(word.prefab, transform.position + (Vector3) offset, Quaternion.identity, transform);
+            GameObject wordObject = Instantiate(word.prefab, transform.position + (Vector3)offset, Quaternion.identity, transform);
             offset.x += wordObject.GetComponent<Collider2D>().bounds.size.x;
 
             if (isType)
@@ -50,7 +50,7 @@ public class Sentence : MonoBehaviour
                 {
                     wordObject.GetComponent<BoxCollider2D>().isTrigger = true;
                 }
-            } 
+            }
             else
             {
                 if (allowedPurposes.Contains(word.purpose))
