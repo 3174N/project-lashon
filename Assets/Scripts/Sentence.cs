@@ -28,6 +28,7 @@ public class Sentence : MonoBehaviour
     /// </summary>
     private void InitializeSentence()
     {
+        allowedWords.Clear();
         foreach (Transform child in transform)
         {
             DestroyImmediate(child.gameObject);
@@ -37,8 +38,8 @@ public class Sentence : MonoBehaviour
 
         foreach (Word word in words)
         {
-            GameObject wordObject = Instantiate(word.prefab, transform.position + (Vector3)offset, Quaternion.identity, transform);
-            offset.x += wordObject.GetComponent<Collider2D>().bounds.size.x;
+            GameObject wordObject = Instantiate(word.prefab, transform.position - (Vector3)offset, Quaternion.identity, transform);
+            offset.x -= wordObject.GetComponent<Collider2D>().bounds.size.x;
 
             if (isType)
             {

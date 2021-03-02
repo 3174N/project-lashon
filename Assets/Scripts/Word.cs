@@ -17,7 +17,10 @@ public class Word
         Nose,
         Nasu,
         MashlimShem,
-        MashlimPoal
+        MashlimPoal,
+        Hesger,
+        Pnia,
+        Kria
     }
 
     #region Variables
