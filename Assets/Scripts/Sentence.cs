@@ -51,11 +51,11 @@ public class Sentence : MonoBehaviour
                 if (allowedType == word.type)
                 {
                     allowedWords.Add(word);
-                    word.isCorrect = true;
+                    transform.GetChild(i).GetComponent<Word>().isCorrect = true;
                 }
                 else
                 {
-                    word.isCorrect = false;
+                    transform.GetChild(i).GetComponent<Word>().isCorrect = false;
                 }
             }
             else
@@ -63,11 +63,11 @@ public class Sentence : MonoBehaviour
                 if (allowedPurpose == word.purpose)
                 {
                     allowedWords.Add(word);
-                    word.isCorrect = true;
+                    transform.GetChild(i).GetComponent<Word>().isCorrect = true;
                 }
                 else
                 {
-                    word.isCorrect = false;
+                    transform.GetChild(i).GetComponent<Word>().isCorrect = false;
                 }
             }
         }

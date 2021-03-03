@@ -74,6 +74,8 @@ MonoBehaviour:
   type: 0
   purpose: 0
   isCorrect: 0
+  parent: {fileID: 0}
+  index: 0
 --- !u!1 &7186045818096331795
 GameObject:
   m_ObjectHideFlags: 0
