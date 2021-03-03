@@ -7,13 +7,13 @@ public class Sentence : MonoBehaviour
 {
     #region Variables
 
-    public Word[] words;
+    public WordToObject[] words;
     [SerializeField] private List<Word> allowedWords = new List<Word>();
 
     public bool isType, isPurpose;
 
-    public Word.wordType[] allowedTypes;
-    public Word.wordPurpose[] allowedPurposes;
+    public Word.wordType allowedType;
+    public Word.wordPurpose allowedPurpose;
 
     #endregion
 
@@ -36,31 +36,38 @@ public class Sentence : MonoBehaviour
 
         Vector2 offset = new Vector2(0f, 0f);
 
-        foreach (Word word in words)
+        for (int i = 0; i <= words.Count(); i++)
         {
-            GameObject wordObject = Instantiate(word.prefab, transform.position - (Vector3)offset, Quaternion.identity, transform);
+            Word word = words[i].word;
+
+            word.parent = this;
+            word.index = i;
+
+            GameObject wordObject = Instantiate(word.gameObject, transform.position - (Vector3)offset, Quaternion.identity, transform);
             offset.x -= wordObject.GetComponent<Collider2D>().bounds.size.x;
 
             if (isType)
             {
-                if (allowedTypes.Contains(word.type))
+                if (allowedType == word.type)
                 {
                     allowedWords.Add(word);
+                    word.isCorrect = true;
                 }
                 else
                 {
-                    wordObject.GetComponent<BoxCollider2D>().isTrigger = true;
+                    word.isCorrect = false;
                 }
             }
             else
             {
-                if (allowedPurposes.Contains(word.purpose))
+                if (allowedPurpose == word.purpose)
                 {
                     allowedWords.Add(word);
+                    word.isCorrect = true;
                 }
                 else
                 {
-                    wordObject.GetComponent<BoxCollider2D>().isTrigger = true;
+                    word.isCorrect = false;
                 }
             }
         }

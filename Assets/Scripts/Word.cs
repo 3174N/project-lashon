@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable] 
-public class Word
+public class Word : MonoBehaviour
 {
     public enum wordType
     {
@@ -29,7 +28,24 @@ public class Word
 
     public wordPurpose purpose;
 
-    public GameObject prefab;
+    public bool isCorrect = false;
+
+    [HideInInspector] public Sentence parent;
+    [HideInInspector] public int index;
 
     #endregion
+
+    private void OnMouseDown()
+    {
+        if (isCorrect)
+        {
+            Debug.Log("Correct!");
+
+            parent.words[index].animationSubject.SetTrigger("Start");
+        }
+        else
+        {
+            Debug.Log("Wrong!");
+        }
+    }
 }

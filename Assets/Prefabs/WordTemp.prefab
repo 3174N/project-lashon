@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5045504771898507837}
   - component: {fileID: 933767452307070533}
+  - component: {fileID: 6131313980851368121}
   m_Layer: 9
   m_Name: WordTemp
   m_TagString: Untagged
@@ -58,6 +59,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.071829, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6131313980851368121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862369163659770389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb0cbb90017761a4eb60197b3f4de78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  purpose: 0
+  isCorrect: 0
 --- !u!1 &7186045818096331795
 GameObject:
   m_ObjectHideFlags: 0
