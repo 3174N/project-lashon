@@ -36,7 +36,7 @@ public class Sentence : MonoBehaviour
 
         Vector2 offset = new Vector2(0f, 0f);
 
-        for (int i = 0; i <= words.Count(); i++)
+        for (int i = 0; i < words.Count(); i++)
         {
             Word word = words[i].word;
 
