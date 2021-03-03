@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     public float runSpeed = 40f;
 
+	[SerializeField] private Transform lastCheckpoint;
+
 	float horizontalMove = 0f;
 	bool jump = false;
 
@@ -42,4 +44,14 @@ public class PlayerController : MonoBehaviour
 		controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 		jump = false;
 	}
+
+	public void SetChechpoint(Transform newPoint)
+    {
+		lastCheckpoint = newPoint;
+    }
+
+	public void LoadCheckpoint()
+    {
+		transform.position = lastCheckpoint.position;
+    }
 }
