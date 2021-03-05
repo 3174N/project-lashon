@@ -2974,6 +2974,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5045504771898507837, guid: 4bc9305bc775a7e4aa0e14c046a07084, type: 3}
   m_PrefabInstance: {fileID: 616264022}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &944015461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6131313980851368121, guid: 4bc9305bc775a7e4aa0e14c046a07084, type: 3}
+  m_PrefabInstance: {fileID: 616264022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb0cbb90017761a4eb60197b3f4de78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &945004097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14565,7 +14576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words:
-  - word: {fileID: 6131313980851368121, guid: 4bc9305bc775a7e4aa0e14c046a07084, type: 3}
+  - word: {fileID: 944015461}
     animationSubject: {fileID: 1901979617}
 --- !u!1001 &2074740632
 PrefabInstance:
