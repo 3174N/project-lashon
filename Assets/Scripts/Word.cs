@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RTLTMPro;
 
 public class Word : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Word : MonoBehaviour
         Nasu,
         MashlimShem,
         MashlimPoal,
+        Oged,
         Hesger,
         Pnia,
         Kria
@@ -34,6 +36,7 @@ public class Word : MonoBehaviour
     [HideInInspector] public int index;
 
     #endregion
+
 
     private void OnMouseDown()
     {
