@@ -45,6 +45,8 @@ public class Word : MonoBehaviour
             Debug.Log("Correct!");
 
             parent.words[index].animationSubject.SetTrigger("Start");
+
+            parent.gameObject.SetActive(false);
         }
         else
         {
