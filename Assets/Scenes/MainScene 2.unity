@@ -2923,11 +2923,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3167253514319927738, guid: 2e8e7ea8f964d054c8dc952047069a8f, type: 3}
       propertyPath: m_text
-      value: "\u05E0\u05E9\u05D5\u05D0"
+      value: "\u05E0\u05D5\u05E9\u05D0"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167253514319927738, guid: 2e8e7ea8f964d054c8dc952047069a8f, type: 3}
+      propertyPath: m_fontSize
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3167253514319927738, guid: 2e8e7ea8f964d054c8dc952047069a8f, type: 3}
       propertyPath: originalText
-      value: "\u05E0\u05E9\u05D5\u05D0"
+      value: "\u05E0\u05D5\u05E9\u05D0"
       objectReference: {fileID: 0}
     - target: {fileID: 3862369163659770389, guid: 2e8e7ea8f964d054c8dc952047069a8f, type: 3}
       propertyPath: m_Name
@@ -2939,7 +2943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5045504771898507837, guid: 2e8e7ea8f964d054c8dc952047069a8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.51
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 5045504771898507837, guid: 2e8e7ea8f964d054c8dc952047069a8f, type: 3}
       propertyPath: m_LocalPosition.y
